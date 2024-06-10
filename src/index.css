@@ -1,13 +1,171 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 22px;
+}
+
+body {
+  
+  max-height:100%;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  width: 100%; 
+  max-width: 600px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  padding: 0 0.25em;
+  background-color: #A15D98;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  
+}
+
+footer {
+  width: 100%;
+  padding: 0.25rem;
+  background-color: #A15D98;
+  color: rgb(0, 0, 0);
+  display: grid;
+  place-content: center;
+}
+ul{
+  width: 100px;
+  list-style: none;
+  padding: 0 25rem 0.25rem;
+}
+ul::before{
+  content: "\200B";
+
+}
+
+.items{
+  width: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  margin: 0.25rem 0;
+  background-color: #A15D98;
+
+
+}
+.items:first-child{
+  margin: 0;
+}
+.items input[type="checkBox"]{
+  text-align: center;
+  width: 2.5rem;
+  width: 48px;
+  min-width: 48px;
+  height: 2.5rem;
+  height: 48px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  color: red;
+  
+}
+.items input[type="checkBox"]:focus+label{
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+.items>label{
+  font-size: 0.75rem;
+  flex-grow: 1;
+  color: rgb(0, 0, 0);
+}
+.items svg{
+  width: 48px;
+  min-width: 48px;
+  height: 35px;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.items svg:focus,.items svg:hover{
+
+  color: red;
+  outline: none;
+}
+.adddForm{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 0 0;
+  padding: 0 0.5rem 0.3rem;
+  border-bottom:2px solid#A15D98;
+}
+.adddForm input[type='text']{
+  flex-grow: 1;
+  max-width: calc(100%-50px);
+  min-height: 20px;
+  font-size: 1rem;
+  padding: 0.1rem;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  outline: none;
+
+}
+button{
+  min-height: 20px;
+  min-width: 35px;
+  font-size: 1rem;
+  background-color: #A15D98;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align:center;
+  color:black;
+  
+}
+.searchform{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 0 0;
+  padding: 0 0.5rem 0.3rem;
+  border-bottom:2px solid#A15D98;
+
+}
+.searchform input{
+  flex-grow: 1;
+  max-width: 35%;
+  min-height: 20px;
+  font-size: 1rem;
+  padding: 0.1rem;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  outline: none;
 }
